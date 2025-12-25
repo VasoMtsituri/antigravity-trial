@@ -1,0 +1,1 @@
+"@AG_CONTEXT.md Read this context file. I want to start implementing the Terraform module for the GCS bucket that will hold our raw stock JSON files. Please plan the folder structure and code."
