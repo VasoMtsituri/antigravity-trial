@@ -32,9 +32,9 @@ resource "time_sleep" "wait_for_iam" {
 }
 
 resource "google_composer_environment" "composer_env" {
-  name    = var.composer_environment_name
-  region  = var.region
-  project = var.project_id
+  name       = var.composer_environment_name
+  region     = var.region
+  project    = var.project_id
   depends_on = [time_sleep.wait_for_iam]
 
   config {
@@ -47,7 +47,7 @@ resource "google_composer_environment" "composer_env" {
       pypi_packages = {
         "astronomer-cosmos"                  = "==1.12.0"
         "dbt-snowflake"                      = "==1.11.0"
-        "apache-airflow-providers-snowflake" = "==6.8.0"
+        "apache-airflow-providers-snowflake" = "==5.6.0"
       }
     }
   }
